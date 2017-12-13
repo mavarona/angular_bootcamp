@@ -1,0 +1,38 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <h2 *ngIf="displayName; else elseBlock">{{ name }}</h2>
+
+  <ng-template #elseBlock>
+    <h2>
+      Else message
+    </h2>
+  </ng-template>
+
+  <div *ngIf="displayCondition; then thenBlock; else elseBlock"></div>
+
+  <ng-template #thenBlock>
+    <h2>Then block message</h2>
+  </ng-template>
+
+  <ng-template #elseBlock>
+      <h2>Else block message</h2>
+  </ng-template>
+
+  <div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'">The red color</div>
+    <div *ngSwitchCase="'green'">The green color</div>
+    <div *ngSwitchCase="'blue'">The blue color</div>
+    <div *ngSwitchDefault>Value by default</div>
+  </div>
+
+  <ul>
+    <li *ngFor="let name of names; index as i">
+      {{i}}-{{name}}
+    </li>
+  </ul>
+
+</div>
+

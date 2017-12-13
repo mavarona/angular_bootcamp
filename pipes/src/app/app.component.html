@@ -1,0 +1,108 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Pipes
+  </h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{name}}</td>
+        <td>uppercase</td>
+        <td>{{name | uppercase }}</td>
+      </tr>
+      <tr>
+        <td>{{name}}</td>
+        <td>lowercase</td>
+        <td>{{name | lowercase }}</td>
+      </tr>
+      <tr>
+        <td>{{dateNow}}</td>
+        <td>date:'dd/MM/yyyy'</td>
+        <td>{{dateNow | date:'dd/MM/yyyy'}}</td>
+      </tr>
+      <tr>
+        <td>{{name}}</td>
+        <td>slice</td>
+        <td>{{name | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td>{{numbers}}</td>
+        <td>slice</td>
+        <td>{{numbers | slice:1:4}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>{{PI | number}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number:'3.0-0'</td>
+        <td>{{PI | number:'3.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number:'1.0-2'</td>
+        <td>{{PI | number:'1.0-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{valPercent}}</td>
+        <td>percent</td>
+        <td>{{valPercent | percent}}</td>
+      </tr>
+      <tr>
+        <td>{{valPercent}}</td>
+        <td>percent:'2.0-2'</td>
+        <td>{{valPercent | percent:'2.0-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{amount}}</td>
+        <td>currency</td>
+        <td>{{amount | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{amount}}</td>
+        <td>currency:'EUR'</td>
+        <td>{{amount | currency:'EUR'}}</td>
+      </tr>
+      <tr>
+        <td>{{user}}</td>
+        <td>json</td>
+        <td>{{user | json}}</td>
+      </tr>
+      <tr>
+        <td>{{dataAsync}}</td>
+        <td>async</td>
+        <td>{{dataAsync | async}}</td>
+      </tr>
+      <tr>
+        <td>{{message}}</td>
+        <td>capital</td>
+        <td>{{message | capital}}</td>
+      </tr>
+      <tr>
+        <td>{{message}}</td>
+        <td>capital:true</td>
+        <td>{{message | capital:true}}</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h4>Youtube<small>video</small></h4>
+  <hr>
+  <iframe
+    width="600"
+    height="500"
+    [src]="video | domSecure:'https://www.youtube.com/embed/'"
+    frameborder=0
+    allowfullscreen>
+  </iframe>
+
+
