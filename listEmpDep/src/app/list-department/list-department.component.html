@@ -1,0 +1,9 @@
+<ul class="list-group" *ngFor="let department of departments">
+
+  <li (click)="onSelect(department)"
+      [class]="getStyle(department)">
+    <span class="badge badge-default badge-pill">{{ department.id }}</span>
+    {{ department.name }}
+  </li>
+
+</ul>
